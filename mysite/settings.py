@@ -26,11 +26,6 @@ SECRET_KEY = 'django-insecure-4ol2kq)!u_r@7mbzap@c0sp(3a951muo4rv3%2xsuoh+r#7_p8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-if DEBUG:
-    import mimetypes
-    mimetypes.add_type("text/css", ".css", True)
-
-
 ALLOWED_HOSTS = ['127.0.0.1', '13.231.153.36', '.pythonanywhere.com',]
 
 
