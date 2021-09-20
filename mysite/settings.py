@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4ol2kq)!u_r@7mbzap@c0sp(3a951muo4rv3%2xsuoh+r#7_p8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '35.76.104.14', '.pythonanywhere.com', 'benchpresslover.tk', 'benchpresslover.net']
+ALLOWED_HOSTS = ['127.0.0.1', '35.76.104.14', '.pythonanywhere.com', 'benchpresslover.tk', 'benchpresslover.net', 'www.benchpresslover.net']
 
 
 # Application definition
