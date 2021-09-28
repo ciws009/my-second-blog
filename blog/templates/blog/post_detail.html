@@ -1,5 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<h1>{{ post.published_date }}</h1>
+    <header>
+        <h1>{{ post.title }}</h1>
+        <h5>{{ post.published_date }}</h5>
+    </header>
+    <div class="text">
+        <p>{{ post.text }}</p>
+    </div>
 {% endblock %}

@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100&family=Noto+Sans+JP:wght@100&family=Roboto:wght@100&display=swap');
+
+
 body {
     margin: 0;
 }
 
-header {
+nav {
     display: flex;
-    background-color: #ddd;
+    color: #202124;
+    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 6.5rem;
 }
 
 h3 {
-    color:#484848;
+    color:#757575;
     text-align: center;
     margin: 10px;
 }
@@ -16,12 +23,49 @@ h3 {
 article {
     border-bottom: solid #ddd;
     margin: 40px 5px; 
+    color: #202124;
+    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 0.1562rem;
+    line-height: 3.5rem;
+    padding: 15px 35px;
 }
 
 article h3 {
     text-align: left;
+    font-size: 3rem;
+    line-height: 4.5rem;
 }
 
 time {
-    color: #484848;
+    color: #757575;
+}
+
+header {
+    color: #202124;
+    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 6.5rem;
+    padding: 15px 35px;
+}
+
+header h5 {
+    color: #202124;
+    font-family: 'Noto Sans  Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 0.1562rem;
+    line-height: 1.5rem;
+}
+
+.text {
+    color: #202124;
+    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 0.1562rem;
+    line-height: 1.5rem;
+    padding: 15px 35px;
 }
