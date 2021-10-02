@@ -6,6 +6,6 @@
         <h5>{{ post.published_date }}</h5>
     </header>
     <div class="text">
-        <p>{{ post.text }}</p>
+        {{ post.text | safe }}
     </div>
 {% endblock %}
