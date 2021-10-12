@@ -11,6 +11,7 @@ import os
 import sys
 
 sys.path.append('/opt/bitnami/projects/mysite')
+sys.path.append('/home/bitnami/.local/lib/python3.8/site-packages')
 
 os.environ.setdefault("PYTHON_EGG_CACHE", "/opt/bitnami/projects/mysite/egg_cache")
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
