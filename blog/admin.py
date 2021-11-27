@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Post, QuillPost
 
-@admin.register(QuillPost)
-class QuillPostAdmin(admin.ModelAdmin):
-    pass
+from django_summernote.admin import SummernoteModelAdmin
+from .models import Post
 
-#admin.site.register(Post)
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content',)
+
+admin.site.register(Post, PostAdmin)
