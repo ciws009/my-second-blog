@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, QuillPost
 
-admin.site.register(Post)
+@admin.register(QuillPost)
+class QuillPostAdmin(admin.ModelAdmin):
+    pass
+
+#admin.site.register(Post)
