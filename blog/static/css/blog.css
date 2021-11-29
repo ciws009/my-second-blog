@@ -25,7 +25,7 @@ article {
     margin: 40px 5px; 
     color: #202124;
     font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
-    font-size: .875rem;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.1562rem;
     line-height: 3.5rem;
@@ -34,12 +34,17 @@ article {
 
 article h3 {
     text-align: left;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 4.5rem;
 }
 
 time {
     color: #757575;
+}
+
+.main {
+    width: 20%, 20%;
+    border-bottom:black;
 }
 
 header {
@@ -54,7 +59,7 @@ header {
 header h5 {
     color: #202124;
     font-family: 'Noto Sans  Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
-    font-size: .875rem;
+    font-size: 2rem;
     font-weight: 400;
     letter-spacing: 0.1562rem;
     line-height: 1.5rem;
@@ -63,9 +68,13 @@ header h5 {
 .text {
     color: #202124;
     font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
-    font-size: .875rem;
+    font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 0.1562rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
     padding: 15px 35px;
+}
+
+h3.text {
+    font-size: 2rem;
 }
