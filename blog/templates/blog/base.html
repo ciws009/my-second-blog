@@ -9,16 +9,21 @@
         <meta name="blog" content="blog">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Benchpresslover">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <nav>
-            <h3>リーマンブログ</h3>
-        </nav>
-        <main>
-            <div>
-            {% block content %}
-            {% endblock %}
+            <div class="col-6">
+                <a class="nav-title" href="">リーマンブログ</a>
             </div>
-        </main>
+        </nav>
+        <div class="container">
+            <main class="col-6">
+                <div>
+                {% block content %}
+                {% endblock %}
+                </div>
+            </main>
+        <div>
     </body>
 </html>

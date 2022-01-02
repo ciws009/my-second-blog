@@ -3,13 +3,8 @@
 {% block content %}
     {% for post in posts %}
         <article>
-            <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
-            <time>Published: {{ post.published_date }}</time>
+            <div><a class="article-title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
+            <div><time>{{ post.published_date }}</time></div>
         </article>
     {% endfor %}
 {% endblock %}
-
-
-/home/bitnami/.local/lib/python3.8/site-packages/django_summernote
-
-/opt/bitnami/python/lib/python3.8/site-packages
