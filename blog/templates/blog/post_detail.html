@@ -2,10 +2,16 @@
 
 {% block content %}
     <header>
-        <h1>{{ post.title }}</h1>
-        <h5>{{ post.published_date }}</h5>
+        <div><a class="article-title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
+        <div><time>{{ post.published_date }}</time></div>
     </header>
     <div class="text">
         {{ post.text | safe }}
     </div>
+    <footer>
+        <a class="next" href="{% url 'post_detail' pk=post.pk %}">&laquo</a>
+        <a class="home" href="{% url 'post_list'%}">Home</a>
+        <a class="previous" href="{% url 'post_detail' pk=post.pk %}">&raquo</a>
+    </footer>
 {% endblock %}
+
