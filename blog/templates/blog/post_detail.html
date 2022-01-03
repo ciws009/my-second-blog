@@ -9,9 +9,21 @@
         {{ post.text | safe }}
     </div>
     <footer>
-        <a class="next" href="{% url 'post_detail' pk=post.pk %}">&laquo</a>
+        {% with next=post.get_next_by_created_date %}
+            {% if next %}
+                <a class="next" href="{% url 'post_detail' pk=next.pk %}">&laquo</a>
+            {% else %}
+                <p class="dummy">&laquo</p>
+            {% endif %}
+        {% endwith %}
         <a class="home" href="{% url 'post_list'%}">Home</a>
-        <a class="previous" href="{% url 'post_detail' pk=post.pk %}">&raquo</a>
+        {% with prev=post.get_previous_by_created_date %}
+            {% if prev %}
+                <a class="previous" href="{% url 'post_detail' pk=prev.pk %}">&raquo</a>
+            {% else %}
+                <p class="dummy">&raquo</p>
+            {% endif %}
+        {% endwith %}
     </footer>
 {% endblock %}
 

@@ -11,10 +11,6 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    color:#202124;
-    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 6.5rem;
     width: 100% ;  
     background-color: #eee;
 }
@@ -22,7 +18,9 @@ nav {
 .nav-title {
     text-decoration: none;
     color:#202124;
-    font-weight: 600;
+    font-size: 18px;
+    line-height: 6.5rem;
+    font-weight: 400;
     padding: 15px;
 }
 
@@ -41,6 +39,10 @@ header, article {
 
 article, .text {
     border-bottom: 1px solid #eee;
+}
+
+article > a {
+    display: block;
 }
 
 .article-title {
@@ -72,12 +74,16 @@ footer {
     align-items: center;   
 }
 
-.next, .home, .previous {
+.next, .home, .previous, .dummy {
     color: #757575;
     text-decoration: none;
     font-size: 16px;
     padding: 15px;
     display: inline-block;
+}
+
+.dummy {
+    opacity: 0;
 }
 
 [class*="col-"] {
