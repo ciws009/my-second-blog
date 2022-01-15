@@ -1,9 +1,27 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Post
+from django.contrib import messages
+from django.db.models import Q
+from functools import reduce
+from operator import and_
 
 def post_list(request):
      posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
+     keyword = request.GET.get('keyword')
+     
+     if keyword:
+          q_list = ''
+          exclusion = set([' ', '　'])
+          for k in keyword:
+               if k in exclusion:
+                    pass
+               else:
+                   q_list+=k
+          x = reduce(and_, [Q(title__icontains=q) for q in q_list])
+          y = reduce(and_, [Q(text__icontains=q) for q in q_list])
+          posts = Post.objects.filter(x | y)
+          messages.success(request, f'「{keyword}」の検索結果')
      return render(request, 'blog/post_list.html', {'posts':posts})
 
 def post_detail(request, pk):

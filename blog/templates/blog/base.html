@@ -5,6 +5,7 @@
         <title>トレログ</title>
         <link rel="shortcut icon" type="image/png" href="{% static 'css/favicon.ico' %}">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">  
         <meta name="blog" content="blog">
         <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -14,12 +15,23 @@
     </head>
     <body>
         <nav>
-            <div class="col-6 nav-container">
-                <div class="nav-abstract">
-                    <a class="nav-title" href="{% url 'post_list' %}">トレログ</a>
-                    <a class="nav-description">頭と体のトレーニング記録</a>
+            <div class="col-3">
+            </div>
+            <div class="col-6 blog-container">
+                <div class="brand-container">
+                    <a class="brand-title" href="{% url 'post_list' %}">トレログ</a>
+                    <a class="brand-description">頭と体のトレーニング記録</a>
                 </div>
-                <a href="https://twitter.com/benchpresslover?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"><img class="twitter-icon" src="{% static 'images/twitter_logo.svg'%}" alt="twitter icon"></a>
+                <div class="col-6 search-container">
+                    <form  method="GET" action="{% url 'post_list' %}">
+                        <input type="text" placeholder="Search.." name="keyword">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-3 sns-container">
+                <a href="" class="user-icon" title="About me"><i class="fa fa-user"></i></a>
+                <a href="https://twitter.com/benchpresslover?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" title="Follow me"><img class="twitter-icon" src="{% static 'images/twitter_logo.svg'%}" alt="twitter icon"></a>
             </div>
         </nav>
         <div class="container">

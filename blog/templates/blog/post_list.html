@@ -1,6 +1,13 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+    <div class="messages">
+        {% if messages %}
+            {% for message in messages %}
+                <a>{{ message }}</a>
+            {%endfor%}
+        {% endif %}
+    </div>
     {% for post in posts %}
         <article>
             <a class="article-title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}<br><time>{{ post.published_date }}</time></a>
