@@ -29,16 +29,18 @@ nav {
 }
 
 .brand-title {
+    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
     text-decoration: none;
     color:#202124;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 800;
     padding: 15px;
     height: 50%;
     padding-bottom: 1px;
 }
 
 .brand-description {
+    font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
     color: #202124;
     font-size: 14px;
     padding: 15px;
@@ -112,7 +114,7 @@ nav input[type=text] {
     justify-content: center;
 }
 
-header, article {
+header, article, .related-posts {
     color: #202124;
     font-family: 'Noto Sans Display', 'Noto Sans JP', Arial, Helvetica, sans-serif;
     letter-spacing: 0.1562rem;
@@ -120,7 +122,12 @@ header, article {
     padding: 15px 15px;
 }
 
-article, .text {    
+.related-posts > a {
+    text-decoration: none;
+    color:#202124;
+}
+
+article, .text, .related-posts {    
     border-bottom: 1px solid #eee;
 }
 
@@ -154,7 +161,7 @@ time {
     line-height: 28px;
     padding: 15px 15px;
 }
-  
+ 
 footer {
     display: flex;
     justify-content: center;
