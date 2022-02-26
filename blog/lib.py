@@ -20,8 +20,9 @@ def get_nouns_from_text(text):
     nouns = ''
     for n in m.split('\n'):
         t = n.split('\t')
-        if len(t) > 4 and '名詞' in t[4]:
-            nouns = nouns + ' ' + t[0]
+        for u in t:
+            if '名詞' in u:
+                nouns = nouns + ' ' + t[0]
     return nouns
 
 # def get_nouns_from_url(url):
@@ -69,7 +70,7 @@ def calc_cosine_similarity_from_tfidf(docs):
 #     cosine_similarity_matrix = calc_cosine_similarity_from_tfidf(nouns_list)
 #     return cosine_similarity_matrix
 
-def get_cosine_similarity_from_posts(posts):
+def get_cosine_similarity_from_posts(posts):    
     nouns_list = get_nouns_list_from_posts(posts)
     cosine_similarity_matrix = calc_cosine_similarity_from_tfidf(nouns_list)
     return cosine_similarity_matrix
