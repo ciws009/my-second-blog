@@ -27,11 +27,4 @@ def post_list(request):
 
 def post_detail(request, pk):
      post = get_object_or_404(Post, pk=pk)     
-     posts = Post.objects.filter(published_date__isnull=False) 
-     # cosine_similarity = get_cosine_similarity_with_pk_from_posts(posts)
-     # related_posts_pks = cosine_similarity[post.pk]
-     # related_posts_titles = {}
-     # for related_pk in related_posts_pks:
-     #      p = Post.objects.filter(pk=related_pk[0])
-     #      related_posts_titles[related_pk[0]] = p[0]
      return render(request, 'blog/post_detail.html', {'post':post})#,'related_posts_titles':related_posts_titles})
