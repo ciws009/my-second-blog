@@ -11,7 +11,7 @@
     <div class="related-posts">
         <a>関連記事</a>
         {% for p in post.related_posts_titles.items %}
-            <a href="{% url 'post_detail' pk=pk %}"><p>{{ title }}</p></a>
+            <a href="{% url 'post_detail' pk=pk %}"><p>{{ p.2title }}</p></a>
         {% endfor %}
     </div>
     <footer>

@@ -1,7 +1,7 @@
-import requests
+# import requests
 import MeCab
 import numpy as np
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # def get_text_from_url(url):
