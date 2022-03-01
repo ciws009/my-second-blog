@@ -1,5 +1,5 @@
 # import requests
-import MeCab
+# import MeCab
 import numpy as np
 # from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import TfidfVectorizer
