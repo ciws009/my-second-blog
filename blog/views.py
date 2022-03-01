@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.db.models import Q
 from functools import reduce
 from operator import and_
-# from .lib import get_cosine_similarity_with_pk_from_posts
+from .lib import get_cosine_similarity_with_pk_from_posts
 
 def post_list(request):
      posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
